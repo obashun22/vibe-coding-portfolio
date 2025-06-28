@@ -6,8 +6,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/vibe-coding-portfolio',
-  assetPrefix: '/vibe-coding-portfolio/',
+  basePath: process.env.NODE_ENV === 'production' ? '/vibe-coding-portfolio' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/vibe-coding-portfolio/' : '',
 };
 
 export default nextConfig;
